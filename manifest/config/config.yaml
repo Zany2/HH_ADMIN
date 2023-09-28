@@ -1,0 +1,76 @@
+# 系统配置
+server:
+  address:     ":8000"
+#  openapiPath: "/api.json"
+#  swaggerPath: "/swagger"
+
+# 日志组件配置
+logger:
+  path:    "./log"
+  level:   "ERROR"
+  file:    "{Y-m-d}.log"
+  stdout:  true
+
+# Mysql配置
+database:
+  logger:
+    path:    "./log/sql"
+    level:   "ERROR"
+    stdout:  true
+  # 默认Mysql配置
+  default:
+    link:   "mysql:root:root@tcp(127.0.0.1:3306)/hh_admin?loc=Local&parseTime=true"
+    debug:  true
+
+# Redis 配置
+redis:
+  # 默认redis配置
+  default:
+    address: 127.0.0.1:6379
+    db: 1
+    pass:
+
+# casbin配置
+casbin:
+  model_path: E:\gitee\go\HH_ADMIN\casbinhh\model.conf
+#  model_path: G:\gitee\go\HH_ADMIN\casbinhh\model.conf
+
+# 文件上传
+file_upload:
+  # 存储路径
+#  location: G:\gitee\go\HH_ADMIN\file\
+  location: E:\gitee\go\HH_ADMIN\file\
+  # 上传文件返回前缀
+  url_prefix: http://127.0.0.1:8000/static/
+  # 文件大小限制 1024 * 1024 *100 = 100M
+  size: 104857600
+  # 文件类型限制
+  file_type:
+    - "jpg"
+    - "jpeg"
+    - "png"
+    - "doc"
+    - "docx"
+    - "webp"
+    - "mp3"
+    - "wav"
+    - "mp4"
+    - "avi"
+    - "wmv"
+    - "mpeg"
+    - "m4v"
+    - "mov"
+    - "asf"
+    - "flv"
+    - "rmvb"
+    - "pdf"
+    - "ppt"
+    - "pptx"
+    - "xls"
+    - "xlsx"
+    - "txt"
+    - "xmind"
+    - "rar"
+    - "zip"
+    - "7zip"
+    - "html"

@@ -1,0 +1,952 @@
+{
+	"info": {
+		"_postman_id": "98fa2430-98fe-4b45-b630-63651a609032",
+		"name": "hh_admin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "hello",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/hello",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登录",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_name",
+							"value": "test1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "注销",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "用户列表 /api/v1/system/auth/user/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/auth/user/list?key_word=&phone=&stime=&etime=&dept_id=&status=0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"auth",
+						"user",
+						"list"
+					],
+					"query": [
+						{
+							"key": "key_word",
+							"value": ""
+						},
+						{
+							"key": "phone",
+							"value": ""
+						},
+						{
+							"key": "stime",
+							"value": ""
+						},
+						{
+							"key": "etime",
+							"value": ""
+						},
+						{
+							"key": "dept_id",
+							"value": ""
+						},
+						{
+							"key": "status",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "用户新增 /api/v1/system/auth/user/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_name\":\"test1\",\r\n    \"password\":\"test1\",\r\n    \"phone\":\"13864897332\",\r\n    \"nick_name\":\"test1\",\r\n    \"role_id\":[27],\r\n    \"dept_id\":1,\r\n    \"email\":\"aaa@qq.com\",\r\n    \"sex\":1,\r\n    \"status\":1,\r\n    \"post_id\":[1],\r\n    \"remark\":\"这是一个测试\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/auth/user/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"auth",
+						"user",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "用户编辑 /api/v1/system/auth/user/update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 10,\r\n    \"nick_name\": \"qwqwqw\",\r\n    \"phone\": \"admin\",\r\n    \"role_id\":[24],\r\n    \"dept_id\":1,\r\n    \"email\": \"aaa@qq.com\",\r\n    \"sex\": 1,\r\n    \"status\":1,\r\n    \"post_id\":[1],\r\n    \"remark\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/auth/user/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"auth",
+						"user",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "用户删除 /api/v1/system/auth/user/delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":1,\r\n    \"edit_type\":1,\r\n    \"password\":\"aaa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/auth/user/delete",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"auth",
+						"user",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "角色列表 /api/v1/system/auth/role/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/auth/role/list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"auth",
+						"role",
+						"list"
+					],
+					"query": [
+						{
+							"key": "role_name",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "0",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "角色新增 /api/v1/system/auth/role/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"role_name\":\"岗位管理员\",\r\n    \"role_key\":\"admin_post\",\r\n    \"menu_ids\":[1,6,20,21,22,23],\r\n    \"role_sort\":2,\r\n    \"status\":1,\r\n    \"remark\":\"岗位管理员\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/auth/role/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"auth",
+						"role",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "角色修改 /api/v1/system/auth/role/update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"role_id\":10,\r\n    \"role_name\":\"测试修改\",\r\n    \"role_key\":\"admin_two\",\r\n    \"menu_ids\":[1,6],\r\n    \"role_sort\":2,\r\n    \"status\":1,\r\n    \"remark\":\"测试修改\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/auth/role/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"auth",
+						"role",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "角色删除 /api/v1/system/auth/role/delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"role_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/auth/role/delete",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"auth",
+						"role",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "岗位列表 /api/v1/system/auth/post/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/auth/post/list?post_name=&post_code=&status=0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"auth",
+						"post",
+						"list"
+					],
+					"query": [
+						{
+							"key": "post_name",
+							"value": ""
+						},
+						{
+							"key": "post_code",
+							"value": ""
+						},
+						{
+							"key": "status",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "岗位新增 /api/v1/system/auth/post/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_code\":\"fceo\",\r\n    \"post_name\":\"副董事长\",\r\n    \"post_sort\":2,\r\n    \"status\":1,\r\n    \"remark\":\"副董事长\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/auth/post/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"auth",
+						"post",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "岗位修改 /api/v1/system/auth/post/update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\":13,\r\n    \"post_code\":\"fveo\",\r\n    \"post_name\":\"小董事长\",\r\n    \"post_sort\":3,\r\n    \"status\":1,\r\n    \"remark\":\"小董事长\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/auth/post/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"auth",
+						"post",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "岗位删除 /api/v1/system/auth/post/delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\":[13]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/auth/post/delete",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"auth",
+						"post",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "部门列表 /api/v1/system/auth/dept/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/auth/dept/list?dept_name=&status=0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"auth",
+						"dept",
+						"list"
+					],
+					"query": [
+						{
+							"key": "dept_name",
+							"value": ""
+						},
+						{
+							"key": "status",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "部门新增 /api/v1/system/auth/dept/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"parent_id\":0,\r\n    \"dept_name\":\"名字\",\r\n    \"order_num\":2,\r\n    \"leader\":\"负责人\",\r\n    \"phone\":\"13854546751\",\r\n    \"email\":\"aa@qq.com\",\r\n    \"status\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/auth/dept/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"auth",
+						"dept",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "部门修改 /api/v1/system/auth/dept/edit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dept_id\":1,\r\n    \"parent_id\":1,\r\n    \"dept_name\":\"名字\",\r\n    \"order_num\":2,\r\n    \"leader\":\"负责人\",\r\n    \"phone\":\"13854546751\",\r\n    \"email\":\"aa@qq.com\",\r\n    \"status\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/auth/dept/edit",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"auth",
+						"dept",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "部门删除 /api/v1/system/auth/dept/delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dept_id\":1,\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/auth/dept/delete",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"auth",
+						"dept",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "菜单列表 /api/v1/system/auth/post/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/auth/menu/list?menu_name=&perms=",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"auth",
+						"menu",
+						"list"
+					],
+					"query": [
+						{
+							"key": "menu_name",
+							"value": ""
+						},
+						{
+							"key": "perms",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "菜单添加 /api/v1/system/auth/menu/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"menu_name\":\"测试菜单\",\r\n    \"parent_id\":3,\r\n    \"order_num\":5,\r\n    \"path\":\"/api/v1/system/auth/menu/test\",\r\n    \"role_id\":[15,16],\r\n    \"method\":\"POST\",\r\n    \"component\":\"\",\r\n    \"is_frame\":1,\r\n    \"is_cache\":1,\r\n    \"menu_type\":3,\r\n    \"visible\":1,\r\n    \"status\":1,\r\n    \"perms\":\"\",\r\n    \"icon\":\"#\",\r\n    \"remark\":\"测试一个菜单啊\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/auth/menu/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"auth",
+						"menu",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "菜单修改 /api/v1/system/auth/menu/update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"menu_id\":38,\r\n    \"menu_name\":\"修改测试菜单\",\r\n    \"parent_id\":3,\r\n    \"order_num\":5,\r\n    \"path\":\"/api/v1/system/auth/menu/aaaaaaaaaaaa\",\r\n    \"role_id\":[15],\r\n    \"method\":\"GET\",\r\n    \"component\":\"\",\r\n    \"is_frame\":1,\r\n    \"is_cache\":1,\r\n    \"menu_type\":3,\r\n    \"visible\":1,\r\n    \"status\":1,\r\n    \"perms\":\"\",\r\n    \"icon\":\"#\",\r\n    \"remark\":\"修改测试菜单\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/auth/menu/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"auth",
+						"menu",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "菜单删除 /api/v1/system/auth/menu/delete",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"menu_id\":35\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/auth/menu/delete",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"auth",
+						"menu",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登录日志 /api/v1/system/monitor/login/manage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/monitor/login/manage?ip=&phone=&status=&before_time=&end_time=",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"monitor",
+						"login",
+						"manage"
+					],
+					"query": [
+						{
+							"key": "ip",
+							"value": ""
+						},
+						{
+							"key": "phone",
+							"value": ""
+						},
+						{
+							"key": "status",
+							"value": ""
+						},
+						{
+							"key": "before_time",
+							"value": ""
+						},
+						{
+							"key": "end_time",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "服务监控 /api/v1/system/monitor/server/manage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/system/monitor/server/manage",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"system",
+						"monitor",
+						"server",
+						"manage"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "e0EYv7pJfqWhmv2fu4QVsUdwlW+zHA5zcRzlPkLnDgpBVXVx435/arD6m8gTHP2z",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
